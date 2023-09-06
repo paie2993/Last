@@ -1,0 +1,3 @@
+docker rm -v texts-volume-container ; \
+docker build -t texts-volume-container . && \
+docker run -v /texts/ --name texts-volume-container texts-volume-container

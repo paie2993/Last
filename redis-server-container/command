@@ -1,0 +1,3 @@
+docker stop redis-server-container 2>/dev/null ; \
+docker rm -v redis-server-container 2>/dev/null ; \
+docker run --rm -d --net container:internal-network-container --volumes-from redis-volume-container --name redis-server-container redis

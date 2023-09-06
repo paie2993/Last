@@ -1,0 +1,3 @@
+docker rm -v texts-seeder-container ; \
+docker build -t texts-seeder-container . && \
+docker run --rm --net container:internal-network-container --volumes-from texts-volume-container --name texts-seeder-container texts-seeder-container

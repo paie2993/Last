@@ -1,0 +1,7 @@
+docker rm tagger-trainer-container ; \
+docker build -t tagger-trainer-container:latest . && \
+docker run --rm --net container:internal-network-container \
+--volumes-from models-code-container  \
+--volumes-from universal-parts-of-speech-container \
+--name tagger-trainer-container \
+tagger-trainer-container

@@ -1,0 +1,3 @@
+docker rm models-code-container ; \
+docker build -t models-code-container:latest . && \ 
+docker run -v /models/ --name models-code-container models-code-container

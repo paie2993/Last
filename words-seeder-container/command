@@ -1,0 +1,7 @@
+docker rm -v words-seeder-container ; \
+docker build -t words-seeder-container:latest . && \
+docker run --rm \
+--net container:internal-network-container \
+--volumes-from words-volume-container \
+--name words-seeder-container \
+words-seeder-container

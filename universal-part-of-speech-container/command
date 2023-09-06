@@ -1,0 +1,5 @@
+docker rm -v universal-parts-of-speech-container ; \
+docker build -t universal-parts-of-speech-container:latest . && \
+docker run -v /universal \
+	--name universal-parts-of-speech-container \
+	universal-parts-of-speech-container

@@ -1,0 +1,7 @@
+docker rm -v dictionary-seeder-container ; \
+docker build -t dictionary-seeder-container:latest . && \
+docker run --rm \
+--net container:internal-network-container \
+--volumes-from universal-parts-of-speech-container \
+--name dictionary-seeder-container \
+dictionary-seeder-container

@@ -1,0 +1,3 @@
+docker rm -v words-volume-container ; \
+docker build -t words-volume-container:latest . && \
+docker run -v /words --name words-volume-container words-volume-container
